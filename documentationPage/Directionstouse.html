@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f3f4f6; /* Light grey background */
+            font-size: 1.5rem; /* Font size */
+            margin-top: 30px; /* Top margin for the entire page */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 40vh;
+            margin-top: 80px; /* Added top margin for the container */
+            margin-bottom: 4rem; /* Adjusted bottom margin */
+        }
+        .glow {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0px 25px rgba(0, 0, 0, 0.2), 0 0px 35px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .list-center li { /* Transition effect */
+            transition: transform 0.3s ease;
+        }
+        .list-center li:hover {
+            transform: translateX(5px); /*Move Right*/
+        }
+        .hover-effect:hover { /*Transition effect */
+            color: #3490dc;
+            transition: color 0.3s ease;
+        }
+        .back-to-home {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-4xl font-bold mb-4 text-center hover-effect mt-8">Welcome to Recipe Generator</h1>
+    <p class="text-lg text-center hover-effect">Directions for use :</p>
+    <div class="container mx-auto px-4">
+        <div class="bg-white shadow-lg rounded-lg p-8 glow">
+            <ul class="list-disc list-center">
+                <li class="mb-2">Enter the ingredients available in the input box. [Example : Bread,eggs]</li>
+                <li class="mb-2">Specify any dietary restrictions or preferences if applicable.</li>
+                <li class="mb-2">Click on the "Send" button in the chatbox.</li>
+                <li class="mb-2">Our Bot will provide you with the most suitable recipe.</li>
+                <li class="mb-2">Enjoy cooking!</li>
+            </ul>
+            <div class="mt-8 text-center">
+                <a href="#" class="back-to-home hover:underline">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
