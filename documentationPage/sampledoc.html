@@ -1,61 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
     <title>Document</title>
-    <!-- Include Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles */
-        body {
-            background-color: #f3f4f6; /* Light grey background */
-            font-size: 1.5rem; /* Font size */
-            /* Top margin for the entire page */
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 40vh;
-            margin-top: 50px; /* Added top margin for the container */
-            margin-bottom: 4rem; /* Adjusted bottom margin */
-        }
-        .glow {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0px 25px rgba(0, 0, 0, 0.2), 0 0px 35px rgba(0, 0, 0, 0.2);
-            border-radius: 20px;
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        .list-center li { /* Transition effect */
-            transition: transform 0.3s ease;
-        }
-        .list-center li:hover {
-            transform: translateX(5px); /*Move Right*/
-        }
-        .hover-effect:hover { /*Transition effect */
-            color: #3490dc;
-            transition: color 0.3s ease;
-        }
-        .back-to-home {
-            color: #000000;
-        }
-        .Head{
-          font-weight: 600;
-          font-family:Arial, Helvetica, sans-serif;
-          padding: 10px;
-          
-        }
-        .content{
-          padding: 20px;
-          margin-left: 20px;
-        }
-        #container{
-          margin-bottom: 20px;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="document.css">
 </head>
-
 <body>
     <nav class="bg-gray-800">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -147,27 +109,6 @@
           </div>
         </div>
       </nav>
-    <h1 class="text-4xl font-bold mb-4 text-center hover-effect mt-8">Welcome to Recipe Finder</h1>
-    
-    <div class="container mx-auto px-4" id="container">
-        <div class="bg-white shadow-lg rounded-lg p-8 glow">
-          <p class="  hover-effect" id="Head" style="margin-bottom: 20px;"><strong>Directions for use :</strong></p>
-          <div class="content">
-            <ul class="list-disc list-center ">
-              
-                <li class="mb-2">Enter the ingredients available in the input box. [Example : Bread,eggs]</li>
-                <li class="mb-2">Specify any dietary restrictions or preferences if applicable.</li>
-                <li class="mb-2">Click on the "Send" button in the chatbox.</li>
-                <li class="mb-2">Our Bot will provide you with the most suitable recipe.</li>
-                <li class="mb-2">Enjoy cooking!</li>
-            </ul>
-          </div>
-            
-            <div>
-              <a href="/homepage/home.html" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Home Page</a>
-            </div>
-        </div>
-    </div>
+<script src="document.js"></script>
 </body>
-
 </html>
