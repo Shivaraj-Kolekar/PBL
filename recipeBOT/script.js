@@ -81,5 +81,14 @@ function appendMessage(sender, message) {
   }
 
   chatContainer.appendChild(messageElement);
+  chatContainer.insertAdjacentHTML('beforeend', '<div>&nbsp;</div>'); // Add non-breaking space for spacing
   chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+}
+function togglePopup() {
+  var popup = document.getElementById("popup");
+  if (popup.style.display === "none") {
+    popup.style.display = "flex";
+  } else {
+    popup.style.display = "none";
+  }
 }
