@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   supabase.auth.onAuthStateChange((event, session) => {
     if (event === 'SIGNED_IN' && session) {
       // Redirect to user form if the user has signed in
-      window.location.href = 'https://recipe-finder-pbl.netlify.app/userpage/user';
+      window.location.href = 'https://recipe-finder-pbl.netlify.app/userpage/userform';
     } else if (event === 'PASSWORD_RECOVERY') {
       console.log('Please check your email to reset your password.');
     } else if (event === 'USER_UPDATED') {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         const user = supabase.auth.user();
         if (user.confirmed_at) {
           // Redirect if the user's email address has been confirmed
-          window.location.href = 'https://recipe-finder-pbl.netlify.app/userpage/user';
+          window.location.href = 'https://recipe-finder-pbl.netlify.app/userpage/userform';
         }
       }, 1000); // Wait a bit before checking if the user is confirmed to ensure the Supabase object updates
     }
