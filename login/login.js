@@ -77,6 +77,4 @@ function setToken(response) {
     alert('Logged in as ' + response.user.email)
   }
 }
-function login (){
-  
-}
+

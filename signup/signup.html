@@ -44,6 +44,10 @@
             </div>
             <div class="buttons">
             <input type='submit' id="button" >
+            <p class="OR">OR</p>
+            </div>
+            <div id="google-sign-in-button" class="g-signin2" data-onsuccess="onGoogleSignIn">
+                <button id="google-sign-in1" class="g-signin22">Sign Up with Google</button>
             </div>
             <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
             <div>
@@ -71,9 +75,17 @@
             </div>
             <div class="buttons">
                 <input type='submit' id="button" >
+                <p class="OR">OR</p>
+
+                
                 </div>
+                <div id="google-sign-in-button" class="g-signin2" data-onsuccess="onGoogleSignIn">
+                    <button id="google-sign-in2"  class="g-signin22">Sign in with Google</button>
+                </div>
+
                 <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up here</a></p>
                 <div>
+                    
                 <a class="home" id="button1" href="/home.html">Back to Home</a>
                 </div>
 
@@ -83,8 +95,8 @@
         <!--</div>-->
         </div>
     </div>
-    <!--
-        <div class='section'>
+    <!---->
+        <div class='section' style="display:none;" >
             <form id='validate'>
                 <h3>Access Token</h3>
                 <input readonly=readonly type='text' id='access-token' /> <small>Default expiry is 60 minutes</small>
@@ -92,15 +104,17 @@
                 <input readonly=readonly type='text' id='refresh-token' /> <small>Supabase-js will use this to automatically fetch a new accessToken for you every 60 mins whilst the client is running</small> 
             </form>
         </div>
-        <div class='section'>
+        <div class='section' style="display:none;">
             <h3>Fetch User Details</h3>
             <button id='user-button'>Fetch</button>
-        </div>-->
-        <div class='section'>
+        </div>
+        <div class='section' style="display:none;">
             <h3>Logout</h3>
             <button id='logout-button'>Logout</button>
         </div>
     </div></div>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <script src="./signup.js"></script>
 </body>
 

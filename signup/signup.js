@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
   logoutButton.onclick = logoutSubmitted.bind(logoutButton)
 })
 
+// Redirect after signup and signin
+/*
 document.addEventListener('DOMContentLoaded', function (event) {
   // Your existing initialization code
 
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   });
 });
 
-
+*/
 
 const signUpSubmitted = (event) => {
   event.preventDefault()
@@ -78,7 +80,7 @@ const signUpSubmitted = (event) => {
     });
 };
 */
-/*
+
 const logInSubmitted = (event) => {
   event.preventDefault()
   const email = event.target[0].value
@@ -88,17 +90,18 @@ const logInSubmitted = (event) => {
     .signIn({ email, password })
     .then((response) => {
       response.error ? alert(response.error.message) : setToken(response)
+      //alert('Logged in as ' + response.user.email)  this is commented beacuase the alert for token already works
     })
     .catch((err) => {
       alert(err.response.text)
     })
-}*/
+}
 
 const fetchUserDetails = () => {
   alert(JSON.stringify(supabase.auth.user()))
 }
 
-
+/*
 const logInSubmitted = (event) => {
   event.preventDefault();
   const email = event.target[0].value;
@@ -116,7 +119,7 @@ const logInSubmitted = (event) => {
     .catch((err) => {
       alert(err.message);
     });
-};
+};*/
 
 
 const logoutSubmitted = (event) => {
@@ -183,3 +186,19 @@ function toggleForms() {
       loginForm.style.display = 'block';
   }
 }
+// Google auth
+async function signInWithGoogle() {
+  try {
+    const { user, session, error } = await supabase.auth.signIn({
+      provider: 'google',
+    });
+    if (error) throw error;
+    console.log(user, session);
+  } catch (error) {
+    console.error('Error signing in with Google:', error.message);
+  }
+}
+
+// Add click event listener to the Google Sign-In button
+document.getElementById('google-sign-in1').addEventListener('click', signInWithGoogle);
+document.getElementById('google-sign-in2').addEventListener('click', signInWithGoogle);
