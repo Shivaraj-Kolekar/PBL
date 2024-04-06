@@ -14,6 +14,33 @@ sendBtn.addEventListener('click', () => {
     userInput.value = '';
   }
 });
+sendBtn.addEventListener('click', async () => {
+  const userMessage = userInput.value.trim();
+  if (userMessage !== '') {
+    appendMessage('user', userMessage);
+    try {
+      const response = await saveChatMessage(userMessage); // Save chat message to the server
+      appendMessage('bot', response.message); // Display server response
+    } catch (error) {
+      console.error('Error:', error);
+      appendMessage('bot', 'Sorry, an error occurred while sending your message.');
+    }
+    userInput.value = '';
+  }
+});
+
+async function saveChatMessage(message) {
+  const response = await fetch(apiUrl, {
+    
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer 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`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ message })
+  });
+  return response.json();
+}
 
 async function generateRecipe(prompt) {
   try {

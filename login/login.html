@@ -23,6 +23,7 @@
                 <input type='submit'>
             </form>
         </div>-->
+        <!--
         <div class='section'>
             <form id='log-in'>
                 <h1 className="text-3xl font-bold">Login</h1>
@@ -47,7 +48,33 @@
             </form>
         </div>
     </div>
-    
+    -->
+    <div>
+    <div class='section'>
+        <form id='log-in'>
+            <h3>Log In</h3>
+            <label>Email</label><input type='email' name='email' />
+            <label>Password</label><input type='password' name='password' />
+            <input type='submit'>
+        </form>
+    </div>
+</div>
+    <div class='section'>
+        <form id='validate'>
+            <h3>Access Token</h3>
+            <input readonly=readonly type='text' id='access-token' /> <small>Default expiry is 60 minutes</small>
+            <h3>Refresh Token</h3>
+            <input readonly=readonly type='text' id='refresh-token' /> <small>Supabase-js will use this to automatically fetch a new accessToken for you every 60 mins whilst the client is running</small> 
+        </form>
+    </div>
+    <div class='section'>
+        <h3>Fetch User Details</h3>
+        <button id='user-button'>Fetch</button>
+    </div>
+    <div class='section'>
+        <h3>Logout</h3>
+        <button id='logout-button'>Logout</button>
+    </div>
     
         <!--<div class='section'>
             <form id='validate'>
