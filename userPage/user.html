@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
     <link rel="stylesheet" href="user.css">
     <style>
         .hold {
@@ -22,6 +23,9 @@
     height:100%;
     background-color: #1b263b;
     
+  }
+  #userInfo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
     </style>
 </head>
@@ -140,6 +144,7 @@
         <h3 class="text-base font-semibold leading-7 text-gray-900">Applicant Information</h3>
         <!--<p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500 text-center">Personal details and application.</p>-->
     </div>
+    <!--
     <div class="mt-6 border-t border-gray-100">
         <dl class="divide-y divide-gray-100">
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -158,11 +163,24 @@
                 <dt class="text-sm font-medium leading-6 text-gray-900">About : Professional Chef ; Expert Cook ; Speciality in Spanish Recipes</dt>
             </div>
         </dl>
+    </div>-->
+    <h2>User Information</h2>
+    <div id="userInfo">
+
     </div>
+    <span class="buttons">
     <div class="center">
       <a href="/home.html" id="buttonv1" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Home</a>
   </div>
+  <div class="center">
+    <a href="/userPage/userform.html" id="updateDetailsBtn" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update Details</a>
+</div>
+<div class="center">
+  <a href="/signup/signup.html" id="logoutBtn" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Logout</a>
+</div>
+</span>
 </div>
 
+    <script src="./user.js"></script>
 </body>
 </html>

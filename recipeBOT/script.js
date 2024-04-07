@@ -119,3 +119,6 @@ function togglePopup() {
     popup.style.display = "none";
   }
 }
+
+
+// Function to append a chat message to the session storage
