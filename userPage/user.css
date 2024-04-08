@@ -6,9 +6,10 @@
     padding: 20px;;
     
 }*/
+
 .buttons{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 10px;;
     justify-content:space-between ;
 }

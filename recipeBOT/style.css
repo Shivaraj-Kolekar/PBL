@@ -19,7 +19,10 @@ body {
     padding: 10px;
     
   }
-  
+  .box{
+    margin-left: 4%;
+    margin-right: 4%;;
+  }
   .input-container {
     display: flex;
     align-items: center;

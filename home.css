@@ -47,8 +47,8 @@ width:100%;
 
   }
   .text-center{
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-left: 8%;
+    margin-right: 8%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -60,8 +60,8 @@ width:100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 8%;
+    margin-right: 8%;
     margin-bottom: 10%;
   }
   #cards{
@@ -71,5 +71,4 @@ width:100%;
   body{
     height:100%;
     background-color: #1b263b;
-    
   }

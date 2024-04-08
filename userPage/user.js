@@ -50,10 +50,10 @@ async function fetchUserData() {
         data.forEach(user => {
             const div = document.createElement('div');
             // Display each piece of user information on a new line
-            div.innerHTML = `Name: ${user.name}<br>
-                             Email: ${user.email}<br>
-                             Allergies: ${user.allergies}<br>
-                             Favorite Recipe: ${user.recipe}`;
+            div.innerHTML = `<strong>Name:</strong> ${user.name}<br>
+                             <strong>Email:</strong> ${user.email}<br>
+                             <strong>Allergies:</strong> ${user.allergies}<br>
+                             <strong>Favorite Recipe:</strong> ${user.recipe}<br>`;
             userInfoDiv.appendChild(div);
         });
     }
@@ -123,6 +123,7 @@ document.getElementById('logoutBtn').addEventListener('click', async () => {
         console.error('Error logging out:', error.message);
     }
 });
+
 
 
 // logout:
