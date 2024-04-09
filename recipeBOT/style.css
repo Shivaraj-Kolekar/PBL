@@ -17,7 +17,7 @@ body {
     height: 600px;
     overflow-y: auto;
     padding: 10px;
-    
+    margin: 10px 10px 10px 10px;
   }
   .box{
     margin-left: 4%;
@@ -107,7 +107,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: #fff;
     padding: 10px 10px 10px 10px;
     margin: 10px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

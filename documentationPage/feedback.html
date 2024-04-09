@@ -45,8 +45,8 @@ textarea {
 }
 .form{
     background-color: #fff;
-    width: 100%;
-    height: 100%;
+    width: max-content;
+    height:max-content;
     padding: 20px;;
     border-radius: 5px;;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
@@ -59,14 +59,38 @@ textarea {
   border:0;
   cursor:pointer;
   color:white;
-  font-size:24px;
+  font-size:1rem;
   padding-top:10px;
   padding-bottom:10px;
   transition: all 0.3s;
   margin-top:-4px;
-  font-weight:700;
+  font-weight: 600; /* Assuming this is what "font-semibold" translates to */
+  line-height: 1.75rem;
+  height: 50px
 }
 [type="submit"]:hover { background-color: #3f37c9; }
+.home{
+  
+  border: none;
+  display: flex;
+  margin-bottom: 6px;;
+  justify-content: center;
+  align-items: center;
+  background-color: #4361ee;
+  text-decoration: none;
+  color: white;
+  height: 40px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 0.5rem;
+  font-size: 1rem; /* Assuming this is what "text-sm" translates to */
+  font-weight: 600; /* Assuming this is what "font-semibold" translates to */
+  line-height: 1.75rem; /* Assuming this is what "leading-6" translates to */
+  color: #fff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 10px;;
+  height: 50px;
+}
     </style>
 </head>
 <body>
@@ -179,11 +203,18 @@ textarea {
         </div>
       </nav>
       <div class="box">
-    <form class="form">      
+    <form class="form" action="https://api.web3forms.com/submit" method="POST">  
+      <input type="hidden" name="access_key" value="22f56441-e735-4254-b006-9f68583a423d">    
         <input name="name" type="text" class="feedback-input" placeholder="Name" />   
         <input name="email" type="text" class="feedback-input" placeholder="Email" />
         <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-        <input type="submit" value="SUBMIT"/>
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        
+        <input type='submit' id="button" >
+        <div>
+                    
+          <a class="home" id="button1" href="/home.html">Back to Home</a>
+          </div>
       </form>
     </div>
       <script>
