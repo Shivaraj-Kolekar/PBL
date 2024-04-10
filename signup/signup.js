@@ -202,3 +202,21 @@ async function signInWithGoogle() {
 // Add click event listener to the Google Sign-In button
 document.getElementById('google-sign-in1').addEventListener('click', signInWithGoogle);
 document.getElementById('google-sign-in2').addEventListener('click', signInWithGoogle);
+
+// github auth
+async function signInWithGithub() {
+  try {
+    const { user, session, error } = await supabase.auth.signIn({
+      provider: 'github',
+      clientId: '669ba9c06e0f3664cbd4',
+    });
+    if (error) throw error;
+    console.log(user, session);
+  } catch (error) {
+    console.error('Error signing in with github:', error.message);
+  }
+}
+
+// Add click event listener to the Google Sign-In button
+document.getElementById('github-sign-in1').addEventListener('click', signInWithGithub);
+document.getElementById('github-sign-in2').addEventListener('click', signInWithGithub);

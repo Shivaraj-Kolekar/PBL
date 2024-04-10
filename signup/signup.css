@@ -126,13 +126,34 @@ body{
   text-align: center;
 }
 .g-signin22{
-  
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   text-align: center;
   background-color: #e63946;
+  height: 50px;
+  border-radius: 5px;;
+  text-decoration: none;
+  border: none;
+  width: 100%;;
+  color: #fff;
+  font-size: 0.875rem; /* Assuming this is what "text-sm" translates to */
+  font-weight: 600; /* Assuming this is what "font-semibold" translates to */
+  line-height: 1.75rem;
+  /* Indigo 600 */
+  
+}
+
+.g-signin22g{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
   height: 50px;
   border-radius: 5px;;
   text-decoration: none;
