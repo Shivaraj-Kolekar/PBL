@@ -70,12 +70,13 @@ width:100%;
   }
   body{
     height:100%;
-    background-color: #1b263b;
-    
-   
+  /* background-color: #1b263b;
+  background: linear-gradient(to right, #1a1a1a, #000000);*/
+  background-color: #1b263b;
   }
   body.dark-mode {
     /* Default text color */
+    
   }
   .dark-mode-toggle{
     background-color: gray;

@@ -187,10 +187,12 @@ function toggleForms() {
   }
 }
 // Google auth
+
 async function signInWithGoogle() {
   try {
     const { user, session, error } = await supabase.auth.signIn({
       provider: 'google',
+      clientId: '647413052426-kmrgh7shlbihgel13gsiprq82o7m74r2.apps.googleusercontent.com',
     });
     if (error) throw error;
     console.log(user, session);
