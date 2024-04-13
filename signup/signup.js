@@ -187,7 +187,6 @@ function toggleForms() {
   }
 }
 // Google auth
-
 async function signInWithGoogle() {
   try {
     const { user, session, error } = await supabase.auth.signIn({
