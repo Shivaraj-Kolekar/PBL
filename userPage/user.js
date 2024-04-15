@@ -32,7 +32,7 @@ fetchUserData();
 */
 var supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
 window.userToken = null
-
+/*
 async function fetchUserData() {
     // Get the email of the currently logged in user
     const userEmail = supabase.auth.user().email;
@@ -57,8 +57,30 @@ async function fetchUserData() {
             userInfoDiv.appendChild(div);
         });
     }
-}
+}*/
+async function fetchUserData() {
+    // Get the email of the currently logged in user
+    const userEmail = supabase.auth.user().email;
 
+    const { data, error } = await supabase
+        .from('userinfo')
+        .select('*')
+        // Filter the data based on the user's email
+        .eq('email', userEmail);
+
+    if (error) {
+        console.error('Error fetching data', error);
+    } else {
+        if (data.length > 0) {
+            const user = data[0];
+            // Update the HTML elements with the fetched data
+            document.getElementById('name').textContent = user.name;
+            document.getElementById('email').textContent = user.email;
+            document.getElementById('allergies').textContent = user.allergies;
+            document.getElementById('recipe').textContent = user.recipe;
+        }
+    }
+}
 fetchUserData();
 // userpage.js
 
