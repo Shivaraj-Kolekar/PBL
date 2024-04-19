@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    
     background-color: #0b132b;
   }
   
@@ -69,26 +69,30 @@ body {
     align-items: center;
     z-index: 999;
     color: white;
+    
   }
   .popup-content {
     background-color: #1b263b;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 40px;
     animation: popupFadeIn 0.3s ease-in-out;
     position: relative;
     color: white;
   }
   .close-btn {
     position: absolute;
-    top: 8px;
+    top: 10px;
     right: 8px;
     height: 30px;
     width: 30px;
     cursor: pointer;
     font-size: 18px;
-    background: transparent;
+    background: #007bff;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @keyframes popupFadeIn {
     from {

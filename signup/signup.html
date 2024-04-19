@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -15,20 +16,6 @@
 <body>
     <div class='container'>
         
-        <!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      
-  
-       <!-- <div class='section'>
-            <a href="https://github.com/supabase/supabase/tree/master/examples/auth/javascript-auth">View the code on GitHub</a>
-        </div>-->
         <div class="signup">
         <div class='section'>
             <form id='sign-up'>
@@ -40,8 +27,11 @@
                 </div>
                 <div class="form-group">
                 <label>Password</label>
-                <input type='password' name='password'  required type="password"/>
+                
+                <input id="password1" type='password' name='password'  required type="password"/>
+                <p id="toggle1" onclick="showPassword1()" style="cursor: pointer ; color:black; font-weight:500;">Show Password</p>
             </div>
+            
             <div class="buttons">
             <input type='submit' id="button" >
             <p class="OR">OR</p>
@@ -58,13 +48,7 @@
             </div>
             </form>
         
-        <!--<div class='section'>-->
-            <!--<form id='log-in'>
-                <h3>Log In</h3>
-                <label>Email</label><input type='email' name='email' />
-                <label>Password</label><input type='password' name='password' />
-                <input type='submit'>
-            </form>-->
+        
             <form id='log-in' style="display:none;">
                 <h1 className="text-3xl font-bold">Login</h1>
                 <p className="text-gray-500 dark:text-gray-400">Enter your email and password below to login to your account</p>
@@ -74,7 +58,8 @@
                 </div>
                 <div class="form-group">
                 <label>Password</label>
-                <input type='password' name='password'  required type="password"/>
+                <input id="password2" type='password' name='password'  required type="password"/>
+                <p id="toggle2" onclick="showPassword2()" style="cursor: pointer ; color:black; font-weight:500;">Show Password</p>
             </div>
             <div class="buttons">
                 <input type='submit' id="button" >
@@ -97,10 +82,10 @@
                 
                 
             </form>
-        <!--</div>-->
+      
         </div>
     </div>
-    <!---->
+
         <div class='section' style="display:none;" >
             <form id='validate'>
                 <h3>Access Token</h3>

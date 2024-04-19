@@ -4,60 +4,10 @@
 var SUPABASE_URL = 'https://chzaizregriqzueqdsnf.supabase.co'
 var SUPABASE_KEY =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNoemFpenJlZ3JpcXp1ZXFkc25mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk0NDg1MjgsImV4cCI6MjAyNTAyNDUyOH0.qzX1fVjkYfaFtq-6QzdasJsDyQB00CslprrHPQU5QC8'
-/*
+
 var supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
 window.userToken = null
 
-async function fetchUserData() {
-    const { data, error } = await supabase
-        .from('userinfo')
-        .select('*');
-
-    if (error) {
-        console.error('Error fetching data', error);
-    } else {
-        const userInfoDiv = document.getElementById('userInfo');
-        data.forEach(user => {
-            const div = document.createElement('div');
-            div.textContent = `Name: ${user.name}, 
-            Email: ${user.email}, 
-            Allergies: ${user.allergies}, 
-            Favorite_Recipe: ${user.recipe}`;
-            userInfoDiv.appendChild(div);
-        });
-    }
-}
-
-fetchUserData();
-*/
-var supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
-window.userToken = null
-/*
-async function fetchUserData() {
-    // Get the email of the currently logged in user
-    const userEmail = supabase.auth.user().email;
-
-    const { data, error } = await supabase
-        .from('userinfo')
-        .select('*')
-        // Filter the data based on the user's email
-        .eq('email', userEmail);
-
-    if (error) {
-        console.error('Error fetching data', error);
-    } else {
-        const userInfoDiv = document.getElementById('userInfo');
-        data.forEach(user => {
-            const div = document.createElement('div');
-            // Display each piece of user information on a new line
-            div.innerHTML = `<strong>Name:</strong> ${user.name}<br>
-                             <strong>Email:</strong> ${user.email}<br>
-                             <strong>Allergies:</strong> ${user.allergies}<br>
-                             <strong>Favorite Recipe:</strong> ${user.recipe}<br>`;
-            userInfoDiv.appendChild(div);
-        });
-    }
-}*/
 async function fetchUserData() {
     // Get the email of the currently logged in user
     const userEmail = supabase.auth.user().email;
