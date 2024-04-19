@@ -20,6 +20,7 @@
 <ul>Backend: supabse </ul>
 <ul>Databse: PostgreSQL </ul>
 <ul>ML model: flax-community/t5-recipe-generation model (credit:<a href="https://huggingface.co/flax-community/t5-recipe-generation">Link</a>)</ul>
+<ul>Deployment: Netligy</ul>
 <br>
 <h3>
   Images of Recipe Finder:
