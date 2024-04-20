@@ -87,13 +87,13 @@ function appendMessage(sender, message) {
       const directionsIndex = recipeDetails.indexOf('directions:');
 
       const title = document.createElement('p');
-      title.textContent = 'Title: ' + (titleIndex !== -1 ? recipeDetails.slice(titleIndex + 1, ingredientsIndex).join(' ') : 'Not provided');
+      title.textContent = 'Title: ' + (titleIndex !== -1 ? recipeDetails.slice(titleIndex + 1, ingredientsIndex).join(' ') : 'Processing Information');
 
       const ingredients = document.createElement('p');
-      ingredients.textContent = 'Ingredients:\n' + (ingredientsIndex !== -1 ? recipeDetails.slice(ingredientsIndex + 1, directionsIndex).join('\n') : 'Not provided');
+      ingredients.textContent = 'Ingredients:\n' + (ingredientsIndex !== -1 ? recipeDetails.slice(ingredientsIndex + 1, directionsIndex).join('\n') : 'Processing Information');
 
       const directions = document.createElement('p');
-      directions.textContent = 'Directions:\n' + (directionsIndex !== -1 ? recipeDetails.slice(directionsIndex + 1).join(' ') : 'Not provided');
+      directions.textContent = 'Directions:\n' + (directionsIndex !== -1 ? recipeDetails.slice(directionsIndex + 1).join(' ') : 'Processing Information');
 
       messageElement.appendChild(title);
       messageElement.appendChild(ingredients);

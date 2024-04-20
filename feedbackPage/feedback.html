@@ -57,8 +57,8 @@
 
     .form {
       background-color: #fff;
-      width: max-content;
-      height: max-content;
+      width: fit-content;
+      height: fit-content;
       padding: 20px;
       ;
       border-radius: 5px;
@@ -223,26 +223,39 @@
             <input type="checkbox" name="botcheck" id="" style="display: none;" />
 
             <div class="mb-6">
-              <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Full Name</label>
+              <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Name: </label>
               <input type="text" name="name" id="name" placeholder="John Doe" required
                 class="w-full px-3 py-2 placeholder-gray-500 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
             </div>
             <div class="mb-6">
-              <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+              <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address: </label>
               <input type="email" name="email" id="email" placeholder="you@company.com" required
                 class="w-full px-3 py-2 placeholder-gray-500 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
             </div>
             <div class="mb-6">
-              <label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Phone Number</label>
-              <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required
+              <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">How would you rate the overall user experience of our website?</label>
+              <input type="text" name="name" id="name" placeholder="Rating out of 10" required
                 class="w-full px-3 py-2 placeholder-gray-500 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
             </div>
             <div class="mb-6">
-              <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
-
-              <textarea rows="5" name="message" id="message" placeholder="Your Message"
-                class="w-full px-3 py-2 placeholder-gray-500 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                required></textarea>
+              <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Were you able to easily navigate through the different sections of the website?</label>
+              <input type="text" name="name" id="name" placeholder="Yes/No" required
+                class="w-full px-3 py-2 placeholder-gray-500 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+            </div>
+            <div class="mb-6">
+              <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Did you find the recipe finder feature helpful in discovering new recipes?</label>
+              <input type="text" name="name" id="name" placeholder="Yes/No" required
+                class="w-full px-3 py-2 placeholder-gray-500 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+            </div>
+            <div class="mb-6">
+              <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Were the instructions clear for using the RecipeBot and other features?</label>
+              <input type="text" name="name" id="name" placeholder="Yes/No" required
+                class="w-full px-3 py-2 placeholder-gray-500 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+            </div>
+            <div class="mb-6">
+              <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Do you have any suggestions for improving the website or additional features you would like to see implemented?</label>
+              <input type="text" name="name" id="name" placeholder="suggestions" required
+                class="w-full px-3 py-2 placeholder-gray-500 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
             </div>
             <div class="mb-6">
               <button type="submit"
