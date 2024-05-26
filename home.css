@@ -102,10 +102,10 @@ body {
 
   margin: 0;
 }
-
+/*
 body.dark-mode {
-  /* Default text color */
-}
+   Default text color
+} */
 
 .dark-mode-toggle {
   background-color: gray;
