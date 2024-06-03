@@ -3,8 +3,9 @@ const userInput = document.getElementById('user-input');
 const sendBtn = document.getElementById('send-btn');
 
 // Replace 'YOUR_API_KEY' with your actual API key
-const apiKey = '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';
-const apiUrl = "https://api-inference.huggingface.co/models/flax-community/t5-recipe-generation"; // Replace with your API endpoint
+const apiKey = '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';
+const apiUrl = "https://api-inference.huggingface.co/models/flax-community/t5-recipe-generation";
+ // Replace with your API endpoint
 
 sendBtn.addEventListener('click', () => {
   const userMessage = userInput.value.trim();
@@ -34,10 +35,11 @@ async function saveChatMessage(message) {
     
     method: 'POST',
     headers: {
-      'Authorization': `Bearer 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`,
+      'Authorization': `Bearer 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`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ message })
+    body: JSON.stringify({ inputs: message })
+
   });
   return response.json();
 }
@@ -59,7 +61,7 @@ async function generateRecipe(prompt) {
 async function query(data) {
   const response = await fetch(apiUrl, {
     headers: {
-      'Authorization': `Bearer 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`,
+      'Authorization': `Bearer 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`,
       'Content-Type': 'application/json'
     },
     method: 'POST',
