@@ -20,19 +20,23 @@
 <ul>Backend: supabse </ul>
 <ul>Databse: PostgreSQL </ul>
 <ul>ML model: flax-community/t5-recipe-generation model (credit:<a href="https://huggingface.co/flax-community/t5-recipe-generation">Link</a>)</ul>
-<ul>Deployment: Netligy</ul>
+<ul>Deployment: Netlify</ul>
 <br>
 <h3>
   Images of Recipe Finder:
 </h3>
 <br>
 <span>
+  
+![image](https://github.com/Shivaraj-Kolekar/Recipe-finder/assets/87165724/85d7cd84-3914-4282-a1a1-d402225de9d3)
 
-![image](https://github.com/Shivaraj-Kolekar/PBL/assets/87165724/0e83e5db-01ba-4899-939d-a9aec449ae13)
 
 ![image](https://github.com/Shivaraj-Kolekar/PBL/assets/87165724/4ad82c60-6cd9-4fff-a267-c149dbbaf09b)
 
 ![image](https://github.com/Shivaraj-Kolekar/PBL/assets/87165724/1e076baa-c12a-4be8-94c5-04f780f420dd)
+
+![image](https://github.com/Shivaraj-Kolekar/Recipe-finder/assets/87165724/4661d835-3096-4a1a-9c63-f5d0c93478e9)
+
 
 ![image](https://github.com/Shivaraj-Kolekar/PBL/assets/87165724/81a8fca0-807c-4e10-861e-3edda6ac28ff)
 
