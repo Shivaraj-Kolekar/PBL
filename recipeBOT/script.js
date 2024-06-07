@@ -3,7 +3,7 @@ const userInput = document.getElementById('user-input');
 const sendBtn = document.getElementById('send-btn');
 
 // Replace 'YOUR_API_KEY' with your actual API key
-const apiKey = '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';
+const apiKey = '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';
 const apiUrl = "https://api-inference.huggingface.co/models/flax-community/t5-recipe-generation";
  // Replace with your API endpoint
 
@@ -35,7 +35,7 @@ async function saveChatMessage(message) {
     
     method: 'POST',
     headers: {
-      'Authorization': `Bearer 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`,
+      'Authorization': `Bearer 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`,
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ inputs: message })
@@ -61,7 +61,7 @@ async function generateRecipe(prompt) {
 async function query(data) {
   const response = await fetch(apiUrl, {
     headers: {
-      'Authorization': `Bearer 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`,
+      'Authorization': `Bearer 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`,
       'Content-Type': 'application/json'
     },
     method: 'POST',
